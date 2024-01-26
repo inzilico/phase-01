@@ -2,7 +2,7 @@
 	Phasing NGS and array datasets with shapeit or eagle.
 	Author: Gennady Khvorykh, info@inzilico.com
 	Only autosomes are phased. They are processed in parallel.
-	The input is vcfgz file. The reference panel and recombination map are applied.
+	The input is vcf.gz file. The reference panel and recombination map are applied.
 	The genomic assembly is GRCh38.
 	Date created: January 23, 2024
 """
@@ -134,7 +134,7 @@ output_file = input_file.replace(".vcf.gz", ".phased.vcf.gz")
 cmd = f"{res['bcftools']} concat --write-index --threads {cpu} -Oz -o {output_file} {bcf_arg}"
 p = run(cmd, shell = True)
 if p.returncode != 0:
-	raise Exception(f'Concatenate bcf invalid result: {p.returncode}')
+	raise Exception(f'Concatenate bcf failed: {p.returncode}')
 
 # Glob log files
 logs = glob.glob("chr*.log")
@@ -146,7 +146,7 @@ log_file = input_file.replace(".vcf.gz", ".log")
 cmd = f"cat {log_arg} > {log_file}"
 p = run(cmd, shell = True)
 if p.returncode != 0:
-	raise Exception(f'Concatenate log invalid result: {p.returncode}')
+	raise Exception(f'Concatenate log failed: {p.returncode}')
 
 # Clean
 for bcf in bcfs:
