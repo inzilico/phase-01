@@ -4,9 +4,17 @@ Phasing is the inference of haplotype phase from genotypes. The repository provi
 
 ## Tools
 
+### Genotype based solutions 
+
 * [SHAPEIT4](https://odelaneau.github.io/shapeit4/) is a software package to estimate haplotypes in large genotype datasets obtained by whole genome sequencing and DNA micoarrays (Delaneau et al., 2019).
 
 * [Eagle2](https://alkesgroup.broadinstitute.org/Eagle/#x1-20001) is a very fast HMM-based algorithm to estimate haplotypes within a genotyped cohort or using a phased reference panel (Loh et al., 2016).
+
+### DNA sequencing based solutions
+
+* [WhatsHap](https://whatshap.readthedocs.io/en/latest/index.html) phases genomic variants using DNA sequencing reads. It is a read-based phasing solution. Both bam and vcf files are required to run this program. 
+
+* [HapCUT2](https://github.com/vibansal/HapCUT2/tree/master) is a maximum-likelihood-based tool for assembling haplotypes from DNA sequence reads.
 
 ## Scripts
 
