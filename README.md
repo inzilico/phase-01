@@ -1,6 +1,6 @@
 # Phasing of genotypes obtained by Next Generation Sequencing 
 
-Phasing is the inference of haplotype phase from gentotypes. The repository provides the scripts to automate the phasing with the use of several tools mentioned often in scientific literature.   
+Phasing is the inference of haplotype phase from genotypes. The repository provides the scripts to automate the phasing with the use of several tools mentioned often in scientific literature.   
 
 ## Tools
 
