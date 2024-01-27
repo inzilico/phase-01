@@ -12,8 +12,6 @@ Phasing is the inference of haplotype phase from genotypes. The repository provi
 
 * `phase-01.py` is a wrapper script to phase the genotypes given as vcf.gz file by programs listed in Tools.  
 
-## Usage
-
 ```bash
 # Phase with SHAPEIT
 python3 /path/to/phase-01.py -r /path/to/resources.csv /path/to/sample.vcf.gz
@@ -25,6 +23,17 @@ where `resources.csv` is the comma seperated text file with the paths to the pro
 # Phase with Eagle
 python3 /path/to/phase-01.py -r /path/to/resources.csv --tool eagle /path/to/sample.vcf.gz
 ```
+
+* `estimate-switch-error-01.py` is the script to estimate the switch error with vcftools for several samples.
+
+```bash
+python3 estimate-switch-error-01.py path/to/filename.txt path/to/out_folder
+```
+
+where `filename.txt` is the 3 column space delimited text file. Each row has the paths to first and second vcf.gz files as well as the sample id. 
+`out_folder` is the folder to save the files created by `vcftools`.
+
+
 
 ## Third-party datasets
 
