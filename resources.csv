@@ -1,3 +1,4 @@
+vcftools,/path/to/vcftools
 bcftools,/path/to/bcftools
 shapeit,/path/to/shapeit4.2
 # Recombination map, GRCh38
