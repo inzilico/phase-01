@@ -4,7 +4,7 @@ Phasing is the inference of haplotype phase from gentotypes. The repository prov
 
 ## Tools
 
-* [SHAPEIT5](https://odelaneau.github.io/shapeit5/) is a software package to estimate haplotypes in large genotype datasets obtained by whole genome sequencing and DNA micoarrays (Delaneau et al., 2019).
+* [SHAPEIT4](https://odelaneau.github.io/shapeit4/) is a software package to estimate haplotypes in large genotype datasets obtained by whole genome sequencing and DNA micoarrays (Delaneau et al., 2019).
 
 * [Eagle2](https://alkesgroup.broadinstitute.org/Eagle/#x1-20001) is a very fast HMM-based algorithm to estimate haplotypes within a genotyped cohort or using a phased reference panel (Loh et al., 2016).
 
@@ -23,7 +23,7 @@ where `res.csv` is the comma seperated text file with the paths to the programs 
 
 ```bash
 # Phase with Eagle
-python3 /path/to/phase-01.py -r /path/to/res.csv --toll eagle /path/to/sample.vcf.gz
+python3 /path/to/phase-01.py -r /path/to/res.csv --tool eagle /path/to/sample.vcf.gz
 ```
 
 ## Third-party datasets
