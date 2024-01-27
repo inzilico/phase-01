@@ -75,7 +75,7 @@ parser.add_argument(
 parser.add_argument(
     "-r", "--res_file", required=True, help="path/to/file.csv with paths to tools"
 )
-parser.add_argument("-c", "--cpu", default=22, help="The number of CPUs (default: 20)")
+parser.add_argument("-c", "--cpu", default=22, help="The number of CPUs (default: 22)")
 parser.add_argument("-t", "--tool", default="shapeit", help="The tool to phase the genotypes: shapeit, eagle (default: shapeit)")
 args = parser.parse_args()
 
