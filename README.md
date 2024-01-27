@@ -16,14 +16,14 @@ Phasing is the inference of haplotype phase from gentotypes. The repository prov
 
 ```bash
 # Phase with SHAPEIT
-python3 /path/to/phase-01.py -r /path/to/res.csv /path/to/sample.vcf.gz
+python3 /path/to/phase-01.py -r /path/to/resources.csv /path/to/sample.vcf.gz
 ```
-where `res.csv` is the comma seperated text file with the paths to the programs and files applied and `sample.vcf.gz` is the original genotypes under VCF file archived with `bgzip` tool.
+where `resources.csv` is the comma seperated text file with the paths to the programs and files applied and `sample.vcf.gz` is the original genotypes under VCF file archived with `bgzip` tool.
 
 
 ```bash
 # Phase with Eagle
-python3 /path/to/phase-01.py -r /path/to/res.csv --tool eagle /path/to/sample.vcf.gz
+python3 /path/to/phase-01.py -r /path/to/resources.csv --tool eagle /path/to/sample.vcf.gz
 ```
 
 ## Third-party datasets
