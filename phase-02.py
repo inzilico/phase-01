@@ -10,6 +10,7 @@ import os, sys
 from subprocess import run
 import argparse
 from multiprocessing import Pool
+from natsort import natsorted
 import glob
 import time
 
@@ -95,10 +96,10 @@ else:
     sys.exit(1)
 
 # Glob phased files
-vcfs = glob.glob("*.phased.vcf.gz")
+vcfs = glob.glob("chr*.phased.vcf.gz")
 
 # Sort phased files
-vcfs.sort()
+vcfs = natsorted(vcfs)
 
 # Concatenate phased vcf files
 vcf_arg = " ".join(vcfs)
@@ -111,7 +112,7 @@ if p.returncode != 0:
 
 # Glob log files
 logs = glob.glob("chr*.phased.log")
-logs.sort()
+logs = natsorted(logs)
 
 # Concatenate log files
 log_arg = " ".join(logs)

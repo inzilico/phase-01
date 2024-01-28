@@ -7,11 +7,12 @@
 	Date created: January 23, 2024
 """
 import os, sys
-from subprocess import run
 import argparse
-from multiprocessing import Pool
 import glob
 import time
+from subprocess import run
+from multiprocessing import Pool
+from natsort import natsorted
 
 # === Functions ===
 
@@ -123,10 +124,10 @@ else:
 	sys.exit(1)
 
 # Glob phased files
-bcfs = glob.glob("*.phased.bcf")
+bcfs = glob.glob("chr*.phased.bcf")
 
 # Sort phased files
-bcfs.sort()
+bcfs = natsorted(bcfs)
 
 # Concatenate phased bcf files
 bcf_arg = ' '.join(bcfs) 
@@ -138,7 +139,7 @@ if p.returncode != 0:
 
 # Glob log files
 logs = glob.glob("chr*.log")
-logs.sort()
+logs = natsorted(logs)
 
 # Concatenate log files
 log_arg = ' '.join(logs)
