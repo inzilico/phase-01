@@ -6,9 +6,11 @@ Phasing is the inference of haplotype phase from genotypes. The repository provi
 
 ### Genotype based solutions 
 
-* [SHAPEIT4](https://odelaneau.github.io/shapeit4/) is a software package to estimate haplotypes in large genotype datasets obtained by whole genome sequencing and DNA micoarrays (Delaneau et al., 2019).
+* [SHAPEIT 4.2.2](https://odelaneau.github.io/shapeit4/) is a software package to estimate haplotypes in large genotype datasets obtained by whole genome sequencing and DNA micoarrays (Delaneau et al., 2019).
 
-* [Eagle2](https://alkesgroup.broadinstitute.org/Eagle/#x1-20001) is a very fast HMM-based algorithm to estimate haplotypes within a genotyped cohort or using a phased reference panel (Loh et al., 2016).
+* [Eagle 2.4.1](https://alkesgroup.broadinstitute.org/Eagle/index.html) is a very fast HMM-based algorithm to estimate haplotypes within a genotyped cohort or using a phased reference panel (Loh et al., 2016).
+
+* [Beagle 5.4](https://faculty.washington.edu/browning/beagle/beagle.html) phases genotypes and impute ungenotyped markers.
 
 ### Sequence based solutions
 
