@@ -3,6 +3,8 @@ bcftools,/path/to/bcftools
 shapeit,/path/to/shapeit4.2
 # Recombination map, GRCh38
 map38,/path/to/folder
+plink_map,/path/to/folder
 # 1000 Genomes as reference panel, GRCh38
 ref1kg38,/path/to/folder
 eagle,/path/to/folder
+beagle,/path/to/beagle-5.4/beagle.22Jul22.46e.jar

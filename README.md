@@ -1,6 +1,6 @@
 # Phasing of genotypes obtained by Next Generation Sequencing 
 
-Phasing is the inference of haplotype phase from genotypes. The repository provides the scripts to automate the phasing with the use of several tools mentioned often in scientific literature.   
+Phasing is the inference of haplotype phase from genotypes. The repository provides the scripts to automate the phasing with the use of several tools described in scientific literature.   
 
 ## Tools
 
@@ -10,7 +10,7 @@ Phasing is the inference of haplotype phase from genotypes. The repository provi
 
 * [Eagle2](https://alkesgroup.broadinstitute.org/Eagle/#x1-20001) is a very fast HMM-based algorithm to estimate haplotypes within a genotyped cohort or using a phased reference panel (Loh et al., 2016).
 
-### DNA sequencing based solutions
+### Sequence based solutions
 
 * [WhatsHap](https://whatshap.readthedocs.io/en/latest/index.html) phases genomic variants using DNA sequencing reads. It is a read-based phasing solution. Both bam and vcf files are required to run this program. 
 
@@ -18,7 +18,7 @@ Phasing is the inference of haplotype phase from genotypes. The repository provi
 
 ## Scripts
 
-* `phase-01.py` is a wrapper script to phase the genotypes given as vcf.gz file by programs listed in Tools.  
+* `phase-01.py` is a wrapper script to phase the genotypes given as vcf.gz file by SHAPEIT4 and Eagle2.  
 
 ```bash
 # Phase with SHAPEIT
@@ -31,6 +31,15 @@ where `resources.csv` is the comma seperated text file with the paths to the pro
 # Phase with Eagle
 python3 /path/to/phase-01.py -r /path/to/resources.csv --tool eagle /path/to/sample.vcf.gz
 ```
+
+* `phase-02.py` is the wrapper script to phase the genotypes given as vcf.gz file with Beagle 5.4 tool.
+
+```bash
+# Phase with Beagle 
+python3 /path/to/phase-02.py -r /path/to/resources.csv /path/to/sample.vcf.gz
+
+```
+
 
 * `estimate-switch-error-01.py` is the script to estimate the switch error with vcftools for several samples.
 
